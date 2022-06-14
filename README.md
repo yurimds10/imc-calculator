@@ -1,3 +1,3 @@
-# Pokedex
+# IMC - Calculator
 
 ## Project in Development...
