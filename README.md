@@ -1,3 +1,3 @@
 # IMC - Calculator
 
-## Project in Development...
+<img src="./src/assets/img/preview.png">
