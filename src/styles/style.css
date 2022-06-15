@@ -1,5 +1,5 @@
 :root {
-  --main-color: rgb(100, 226, 174);
+  --main-color: #64e2ae;
   --main-color-lighter: rgb(85, 194, 149);
 }
 
@@ -31,6 +31,11 @@ body {
   height: 400px;
   width: 100%;
   box-shadow: .1px 1px 5px 1px rgba(0, 0, 0, .1);
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 
 .content-data {
@@ -80,18 +85,39 @@ button:hover {
   background-color: var(--main-color-lighter);
 }
 
-.result {
+.result-box {
   box-shadow: .1px 1px 5px 1px rgba(0, 0, 0, .1);
   width: 90%;
   height: 4rem;
   border-radius: 1rem;
   margin-bottom: 3rem;
-  font-size: 1.5rem;
+  
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   align-items: center;
   padding: 0 1rem 0 1rem;
+  
+}
+
+.result-box .text{
+  display: inline-flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.result-box .text p {
+  margin-left: .5rem;
+}
+
+.result-box .number {
+  font-size: 1.5rem;
   font-weight: 500;
+}
+
+@media screen and (max-width: 765px) {
+  img {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -100,10 +126,10 @@ button:hover {
   }
 
   .content-img {
-    border-radius: 1rem;
+    display: flex;
+    align-items: center;
     width: 50%;
     height: 100%;
-    background-color: var(--main-color);
     order: 2;
   }
 
@@ -113,11 +139,11 @@ button:hover {
   }
 
   .form {
-    width: 70%;
+    width: 80%;
   }
 
-  .result {
-    width: 70%;
+  .result-box {
+    width: 80%;
   }
 }
 

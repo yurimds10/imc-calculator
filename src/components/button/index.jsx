@@ -1,6 +1,7 @@
 const Button = (props) => {
   const calcImc = () => {
-    const result = props.height / (props.weight * props.weight);
+    const result = props.weight / (props.height * props.height);
+    console.log(result);
     props.setResult(result);
   }
 

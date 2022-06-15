@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Image from './assets/img/trainer.png';
 import Height from './components/height';
 import Weight from './components/weight';
 import Result from './components/result';
@@ -14,7 +15,7 @@ const App = () => {
     <div className='container'>
       <div className="content-box">
         <div className="content-img"> 
-          <img src="" alt="" />
+          <img src={Image} alt="trainer" />
         </div>
         <div className="content-data">
           <Result result={result}/>
