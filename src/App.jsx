@@ -1,51 +1,28 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import Height from './components/height';
+import Weight from './components/weight';
+import Result from './components/result';
 import style from './styles/style.css';
+import Button from './components/button';
 
 const App = () => {
-  const [height, setHeight] = useState('');
-  const [weight, setWeight] = useState('');
+  const [height, setHeight] = useState(0);
+  const [weight, setWeight] = useState(0);
   const [result, setResult] = useState(0);
-
-  const calcImc = () => {
-    parseInt(height);
-    parseInt(weight);
-
-    const imc = weight / height ** height;
-    setResult(imc);
-  }
-
   
   return (
     <div className='container'>
       <div className="content-box">
-        <div className="content-img">
+        <div className="content-img"> 
           <img src="" alt="" />
         </div>
         <div className="content-data">
-          <div className="result">
-            {result}
+          <Result result={result}/>
+          <div className="form">
+            <Height height={height} setHeight={setHeight}/>
+            <Weight weight={weight} setWeight={setWeight}/>
+            <Button weight={weight} height={height} setResult={setResult}/>
           </div>
-          <form className="form">
-            <input
-              type="number"
-              name="height"
-              value={height}
-              onChange={(e) => setHeight(e.target.value)}
-              placeholder='Your Height'
-            />
-
-            <input
-              type="number"
-              name="weight"
-              value={weight}
-              onChange={(e) => setWeight(e.target.value)}
-              placeholder='Your Weight'
-            />
-
-            <button onClick={() => calcImc()}>
-              Calcule
-            </button>
-          </form>
         </div>
       </div>
     </div>

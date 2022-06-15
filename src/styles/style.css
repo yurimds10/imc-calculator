@@ -1,5 +1,6 @@
 :root {
   --main-color: rgb(100, 226, 174);
+  --main-color-lighter: rgb(85, 194, 149);
 }
 
 * {
@@ -38,37 +39,50 @@ body {
   align-items: center;
   justify-content: center;
   padding: 2rem 0 2rem 0;
+  width: 100%;
 }
 
 .form {
-  width: 80%;
+  width: 90%;
+}
+
+label {
+  display: block;
+  width: 100%;
+  box-shadow: .1px 1px 5px 1px rgba(0, 0, 0, .1);
+  border-radius: .5rem;
+  margin-bottom: 1rem;
+  padding: .5rem 0 .5rem .5rem;
 }
 
 input {
-  width: 100%;
-  box-shadow: .1px 1px 5px 1px rgba(0, 0, 0, .1);
   border: none;
-  padding: .5rem 1rem .5rem 1rem;
-  border-radius: .5rem;
-  margin-bottom: 1rem;
+  width: 100%;
+  padding: .5rem 0;
   outline: none;
+  font-size: 1rem;
 }
 
 button {
   width: 100%;
-  padding-top: .6rem;
-  padding-bottom: .6rem;
+  padding: 1rem 0;
   border-radius: .5rem;
   border: none;
   background-color: var(--main-color);
   color: #FFF;
   font-weight: 600;
+  font-size: 1rem;
   cursor: pointer;
+  transition: .3s;
+}
+
+button:hover {
+  background-color: var(--main-color-lighter);
 }
 
 .result {
   box-shadow: .1px 1px 5px 1px rgba(0, 0, 0, .1);
-  width: 80%;
+  width: 90%;
   height: 4rem;
   border-radius: 1rem;
   margin-bottom: 3rem;
